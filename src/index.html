@@ -117,6 +117,16 @@
         new_model.lineTo(30, 10);
         new_model.lineTo(10, 10);
 
+        var extrudeSettings = {
+            steps: 6,
+            depth: 10,
+            bevelEnabled: true,
+            bevelThickness: 1,
+            bevelSize: 4,
+            bevelOffset: 4,
+            bevelSegments: 2
+        };
+
         let geometry1 = new THREE.CubeGeometry(1, 1, 1);
         let material1 = new THREE.MeshNormalMaterial({
             transparent: true,
