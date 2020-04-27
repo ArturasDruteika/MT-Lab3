@@ -127,17 +127,10 @@
             bevelSegments: 2
         };
 
-        let geometry1 = new THREE.CubeGeometry(1, 1, 1);
-        let material1 = new THREE.MeshNormalMaterial({
-            transparent: true,
-            opacity: 0.5,
-            side: THREE.DoubleSide
-        });
+        var figure = new THREE.ExtrudeGeometry( modelis, extrudeSettings );
 
-        mesh1 = new THREE.Mesh(geometry1, material1);
-        mesh1.position.y = 0.5;
+        var material = new THREE.MeshBasicMaterial( { color: 0x4CA3DD, opacity: 0.5 } );
 
-        markerRoot1.add(mesh1);
     }
 
 
