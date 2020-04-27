@@ -27,9 +27,7 @@
 
     var arToolkitSource, arToolkitContext;
 
-    var markerRoot1, markerRoot2;
-
-    var mesh1;
+    var markerRoot1;
 
     initialize();
     animate();
@@ -127,9 +125,14 @@
             bevelSegments: 2
         };
 
-        var figure = new THREE.ExtrudeGeometry( modelis, extrudeSettings );
+        var figure = new THREE.ExtrudeGeometry( new_model, extrudeSettings );
 
         var material = new THREE.MeshBasicMaterial( { color: 0x4CA3DD, opacity: 0.5 } );
+
+        var mesh1 = new THREE.Mesh( figure, material ) ;
+
+        mesh1.position.y = 0.5;
+        markerRoot1.add(mesh1);
 
     }
 
